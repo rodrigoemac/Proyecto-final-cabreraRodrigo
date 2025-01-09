@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Cuotas</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Simulador de Cuotas</h1>
+        <form id="simulador-form">
+            <label for="monto">Monto a financiar:</label>
+            <input type="number" id="monto" placeholder="Ingrese el monto" required>
+
+            <label for="cuotas">Seleccionar cuotas:</label>
+            <select id="cuotas" required>
+                <option value="" disabled selected>Seleccione las cuotas</option>
+                <option value="3">3 cuotas (15% interés)</option>
+                <option value="6">6 cuotas (30% interés)</option>
+                <option value="12">12 cuotas (45% interés)</option>
+            </select>
+
+            <button type="submit">Calcular</button>
+        </form>
+
+        <div id="resultado" class="hidden">
+            <h2>Resultados:</h2>
+            <p id="detalle"></p>
+            <button id="mostrar-estadisticas">Ver estadísticas</button>
+        </div>
+
+        <div id="estadisticas" class="hidden">
+            <canvas id="grafico"></canvas>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
